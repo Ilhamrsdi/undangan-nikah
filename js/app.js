@@ -321,8 +321,8 @@ const DEFAULT_WISHES = [
 ];
 
 // GANTI DENGAN URL DAN ANON KEY SUPABASE ANDA
-const SUPABASE_URL = ''; 
-const SUPABASE_KEY = ''; 
+const SUPABASE_URL = 'https://afdupjxkrwomvykempwo.supabase.co'; 
+const SUPABASE_KEY = 'sb_publishable_3wLqM21wR3TYSSAZswZNug_8qNJFUAT'; 
 const TABLE_NAME = 'wishes';
 
 async function fetchWishesFromSupabase() {
