@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <defs>
+    <style>
+      .batik-line {
+        stroke: #d4af37;
+        stroke-width: 0.75;
+        fill: none;
+        opacity: 0.12;
+      }
+      .batik-accent {
+        fill: #d4af37;
+        opacity: 0.08;
+      }
+    </style>
+  </defs>
+
+  <!-- Kawung 4-Fold Petal Patterns (Khas Jawa) -->
+  <g class="batik-line">
+    <!-- Center Kawung -->
+    <ellipse cx="60" cy="60" rx="35" ry="18" transform="rotate(45 60 60)"/>
+    <ellipse cx="60" cy="60" rx="35" ry="18" transform="rotate(-45 60 60)"/>
+    <circle cx="60" cy="60" r="4.5" class="batik-accent"/>
+
+    <!-- Corner Kawung Interlocking -->
+    <ellipse cx="0" cy="0" rx="35" ry="18" transform="rotate(45 0 0)"/>
+    <ellipse cx="0" cy="0" rx="35" ry="18" transform="rotate(-45 0 0)"/>
+    
+    <ellipse cx="120" cy="0" rx="35" ry="18" transform="rotate(45 120 0)"/>
+    <ellipse cx="120" cy="0" rx="35" ry="18" transform="rotate(-45 120 0)"/>
+
+    <ellipse cx="0" cy="120" rx="35" ry="18" transform="rotate(45 0 120)"/>
+    <ellipse cx="0" cy="120" rx="35" ry="18" transform="rotate(-45 0 120)"/>
+
+    <ellipse cx="120" cy="120" rx="35" ry="18" transform="rotate(45 120 120)"/>
+    <ellipse cx="120" cy="120" rx="35" ry="18" transform="rotate(-45 120 120)"/>
+
+    <!-- Mega Mendung Cloud Ripples (Khas Sunda) -->
+    <path d="M 60 15 Q 67 7 75 15 Q 82 22 75 30" stroke="#f3e5ab" stroke-width="0.8" opacity="0.14"/>
+    <path d="M 60 105 Q 67 97 75 105 Q 82 112 75 120" stroke="#f3e5ab" stroke-width="0.8" opacity="0.14"/>
+    <path d="M 15 60 Q 7 67 15 75 Q 22 82 30 75" stroke="#f3e5ab" stroke-width="0.8" opacity="0.14"/>
+    <path d="M 105 60 Q 97 67 105 75 Q 112 82 120 75" stroke="#f3e5ab" stroke-width="0.8" opacity="0.14"/>
+  </g>
+</svg>

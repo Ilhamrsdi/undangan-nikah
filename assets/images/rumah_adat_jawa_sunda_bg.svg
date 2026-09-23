@@ -1,0 +1,282 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <!-- Rich Wood Gradients -->
+    <linearGradient id="woodTeakDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a1408"/>
+      <stop offset="50%" stop-color="#1d0c04"/>
+      <stop offset="100%" stop-color="#120702"/>
+    </linearGradient>
+
+    <linearGradient id="woodTeakBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b1b0b"/>
+      <stop offset="25%" stop-color="#5a2e16"/>
+      <stop offset="50%" stop-color="#733d1e"/>
+      <stop offset="75%" stop-color="#5a2e16"/>
+      <stop offset="100%" stop-color="#331709"/>
+    </linearGradient>
+
+    <linearGradient id="woodCarvingGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8a5522"/>
+      <stop offset="40%" stop-color="#d4a34b"/>
+      <stop offset="70%" stop-color="#b07d2c"/>
+      <stop offset="100%" stop-color="#4d290c"/>
+    </linearGradient>
+
+    <!-- Warm Chandelier & Hall Light Glow -->
+    <radialGradient id="chandelierGlow" cx="50%" cy="22%" r="65%">
+      <stop offset="0%" stop-color="#ffe699" stop-opacity="0.85"/>
+      <stop offset="25%" stop-color="#e2a838" stop-opacity="0.45"/>
+      <stop offset="60%" stop-color="#4a2e12" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#07140e" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="centerStageGlow" cx="50%" cy="55%" r="50%">
+      <stop offset="0%" stop-color="#ffdf88" stop-opacity="0.32"/>
+      <stop offset="40%" stop-color="#a87c28" stop-opacity="0.15"/>
+      <stop offset="85%" stop-color="#05120d" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="ambientNight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#061710"/>
+      <stop offset="50%" stop-color="#0a1f16"/>
+      <stop offset="100%" stop-color="#040b08"/>
+    </linearGradient>
+
+    <!-- Floor Wood Planks -->
+    <linearGradient id="floorWood" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a0d06"/>
+      <stop offset="60%" stop-color="#120803"/>
+      <stop offset="100%" stop-color="#0a0401"/>
+    </linearGradient>
+
+    <!-- Patterns for Wood Carving & Batik Jati -->
+    <pattern id="gebyokCarvingGrid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <rect width="60" height="60" fill="#241006" stroke="#160903" stroke-width="1"/>
+      <!-- Floral Relief (Lung-lungan ukiran jati Jepara) -->
+      <circle cx="30" cy="30" r="14" fill="none" stroke="#663919" stroke-width="2" opacity="0.6"/>
+      <path d="M 30 16 C 24 24 24 36 30 44 C 36 36 36 24 30 16 Z" fill="#804a22" opacity="0.75"/>
+      <path d="M 16 30 C 24 24 36 24 44 30 C 36 36 24 36 16 30 Z" fill="#804a22" opacity="0.75"/>
+      <circle cx="30" cy="30" r="4" fill="#caa262"/>
+      <!-- Diagonal leaf connectors -->
+      <path d="M 5 5 Q 30 15 55 5" fill="none" stroke="#522a10" stroke-width="1.5"/>
+      <path d="M 5 55 Q 30 45 55 55" fill="none" stroke="#522a10" stroke-width="1.5"/>
+    </pattern>
+
+    <!-- Soft Blur for Cinematic Depth -->
+    <filter id="softAtmosphere" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Base Wall Atmosphere -->
+  <rect width="1920" height="1080" fill="url(#ambientNight)"/>
+
+  <!-- =========================================================================
+       1. RUMAH JOGLO ATAP & TUMPANGSARI (CEILING BEAMS KHAS JAWA)
+       ========================================================================= -->
+  <!-- Outer Roof Slope (Atap Joglo Penyangga & Eaves) -->
+  <polygon points="0,0 1920,0 1780,240 140,240" fill="#1b0c05" opacity="0.95"/>
+  <line x1="0" y1="240" x2="1920" y2="240" stroke="#4a2511" stroke-width="6"/>
+
+  <!-- Tumpangsari Layer 1 (Tiered Teak Ceiling Beams) -->
+  <polygon points="260,0 1660,0 1540,160 380,160" fill="url(#woodTeakDark)" stroke="#522a12" stroke-width="3"/>
+  <!-- Tumpangsari Layer 2 -->
+  <polygon points="450,0 1470,0 1400,105 520,105" fill="#241006" stroke="#6e3b1b" stroke-width="2.5"/>
+  <!-- Tumpangsari Layer 3 (Center Peak) -->
+  <polygon points="620,0 1300,0 1260,60 660,60" fill="#180a03" stroke="#8a4d25" stroke-width="2"/>
+
+  <!-- Ornate Carved Valance / Lisplang Ukir Sunda-Jawa (Cagak & Sulur) -->
+  <g fill="none" stroke="#a67132" stroke-width="2.2" opacity="0.8">
+    <path d="M 140 240 Q 200 220 260 240 Q 320 220 380 240 Q 440 220 500 240 Q 560 220 620 240 Q 680 220 740 240 Q 800 220 860 240 Q 920 220 960 240 Q 1000 220 1060 240 Q 1120 220 1180 240 Q 1240 220 1300 240 Q 1360 220 1420 240 Q 1480 220 1540 240 Q 1600 220 1660 240 Q 1720 220 1780 240"/>
+  </g>
+
+  <!-- =========================================================================
+       2. GEBYOK UKIR KAYU JATI JAWA (MAJESTIC CARVED TEAK BACKGROUND WALL)
+       ========================================================================= -->
+  <!-- Main Gebyok Wall Base -->
+  <rect x="180" y="240" width="1560" height="660" fill="url(#gebyokCarvingGrid)"/>
+
+  <!-- Gebyok Architectural Frame (Tiang & Kusen Penyekat) -->
+  <!-- Left Panel Outer Frame -->
+  <rect x="180" y="240" width="380" height="660" fill="#180b04" stroke="#4d2610" stroke-width="8" opacity="0.85"/>
+  <!-- Left Sub-Carvings -->
+  <g stroke="#804a22" stroke-width="1.8" fill="none" opacity="0.7">
+    <rect x="210" y="270" width="320" height="260" rx="8"/>
+    <circle cx="370" cy="400" r="50"/>
+    <path d="M 370 350 L 370 450 M 320 400 L 420 400"/>
+    <rect x="210" y="560" width="320" height="300" rx="8"/>
+    <circle cx="370" cy="710" r="65"/>
+    <path d="M 370 645 L 370 775 M 305 710 L 435 710"/>
+  </g>
+
+  <!-- Right Panel Outer Frame -->
+  <rect x="1360" y="240" width="380" height="660" fill="#180b04" stroke="#4d2610" stroke-width="8" opacity="0.85"/>
+  <!-- Right Sub-Carvings -->
+  <g stroke="#804a22" stroke-width="1.8" fill="none" opacity="0.7">
+    <rect x="1390" y="270" width="320" height="260" rx="8"/>
+    <circle cx="1550" cy="400" r="50"/>
+    <path d="M 1550 350 L 1550 450 M 1500 400 L 1600 400"/>
+    <rect x="1390" y="560" width="320" height="300" rx="8"/>
+    <circle cx="1550" cy="710" r="65"/>
+    <path d="M 1550 645 L 1550 775 M 1485 710 L 1615 710"/>
+  </g>
+
+  <!-- Center Grand Gebyok Arch Doorway (Pintu Utama Gebyok Keraton) -->
+  <rect x="620" y="240" width="680" height="660" fill="#0d0502" stroke="url(#woodTeakBeam)" stroke-width="12"/>
+
+  <!-- Ornate Arch Top (Mahkota Lawang Gebyok / Ukiran Kala Makara Jawa) -->
+  <path d="M 620 380 Q 960 270 1300 380 L 1300 240 L 620 240 Z" fill="#2d1508" stroke="url(#woodCarvingGold)" stroke-width="4"/>
+  <path d="M 720 370 Q 960 295 1200 370" fill="none" stroke="#d4af37" stroke-width="3" stroke-dasharray="8 6"/>
+  <circle cx="960" cy="305" r="18" fill="url(#woodCarvingGold)" stroke="#ffd700" stroke-width="2"/>
+  <circle cx="960" cy="305" r="8" fill="#ffd700"/>
+
+  <!-- Center Double Door Frame with Carved Inlay Panels -->
+  <line x1="960" y1="380" x2="960" y2="900" stroke="url(#woodCarvingGold)" stroke-width="6"/>
+  
+  <!-- Left Door Relief (Gunungan Wayang Outline on Wood) -->
+  <path d="M 790 440 C 830 520 880 620 890 730 L 720 730 C 730 620 760 520 790 440 Z" fill="rgba(212,175,55,0.06)" stroke="#b8860b" stroke-width="2" opacity="0.65"/>
+  <line x1="790" y1="440" x2="790" y2="730" stroke="#b8860b" stroke-width="1.2" stroke-dasharray="4 6" opacity="0.6"/>
+
+  <!-- Right Door Relief (Gunungan Wayang Outline on Wood) -->
+  <path d="M 1130 440 C 1090 520 1040 620 1030 730 L 1200 730 C 1190 620 1160 520 1130 440 Z" fill="rgba(212,175,55,0.06)" stroke="#b8860b" stroke-width="2" opacity="0.65"/>
+  <line x1="1130" y1="440" x2="1130" y2="730" stroke="#b8860b" stroke-width="1.2" stroke-dasharray="4 6" opacity="0.6"/>
+
+  <!-- =========================================================================
+       3. SOKO GURU (MAJESTIC SOLID TEAK PILLARS)
+       ========================================================================= -->
+  <!-- Pillar 1: Left Main (Soko Guru Kiri) -->
+  <g id="soko-guru-left">
+    <!-- Base Pedestal (Umpak Batu Berukir) -->
+    <polygon points="530,860 650,860 670,910 510,910" fill="#2d2825" stroke="#4a4440" stroke-width="3"/>
+    <polygon points="510,910 670,910 680,940 500,940" fill="#1f1b19" stroke="#383330" stroke-width="2"/>
+    <!-- Pillar Shaft -->
+    <rect x="545" y="160" width="90" height="700" fill="url(#woodTeakBeam)" stroke="#2b1409" stroke-width="3"/>
+    <!-- Gold Carved Capital & Bracket (Tumpangsari Bracket / Praba Tiang) -->
+    <polygon points="520,160 660,160 635,210 545,210" fill="url(#woodCarvingGold)" stroke="#ffd700" stroke-width="1.5"/>
+    <rect x="540" y="210" width="100" height="30" fill="#261005" stroke="#d4af37" stroke-width="1.5"/>
+  </g>
+
+  <!-- Pillar 2: Right Main (Soko Guru Kanan) -->
+  <g id="soko-guru-right">
+    <!-- Base Pedestal (Umpak Batu Berukir) -->
+    <polygon points="1270,860 1390,860 1410,910 1250,910" fill="#2d2825" stroke="#4a4440" stroke-width="3"/>
+    <polygon points="1250,910 1410,910 1420,940 1240,940" fill="#1f1b19" stroke="#383330" stroke-width="2"/>
+    <!-- Pillar Shaft -->
+    <rect x="1285" y="160" width="90" height="700" fill="url(#woodTeakBeam)" stroke="#2b1409" stroke-width="3"/>
+    <!-- Gold Carved Capital & Bracket -->
+    <polygon points="1260,160 1400,160 1375,210 1285,210" fill="url(#woodCarvingGold)" stroke="#ffd700" stroke-width="1.5"/>
+    <rect x="1280" y="210" width="100" height="30" fill="#261005" stroke="#d4af37" stroke-width="1.5"/>
+  </g>
+
+  <!-- Side Pillars (Outer Columns) -->
+  <rect x="140" y="160" width="55" height="760" fill="url(#woodTeakDark)" stroke="#1d0c04" stroke-width="2"/>
+  <rect x="1725" y="160" width="55" height="760" fill="url(#woodTeakDark)" stroke="#1d0c04" stroke-width="2"/>
+
+  <!-- =========================================================================
+       4. TRADITIONAL SUNDANESE TOUCHES (CAGAK JULANG NGAPAK & MEGA MENDUNG)
+       ========================================================================= -->
+  <!-- Left Corner Cagak Finial (Rumah Julang Ngapak Sunda) -->
+  <path d="M 140 240 L 90 200 L 80 180 M 90 200 L 130 185" stroke="url(#woodCarvingGold)" stroke-width="4" stroke-linecap="round"/>
+  <!-- Right Corner Cagak Finial (Rumah Julang Ngapak Sunda) -->
+  <path d="M 1780 240 L 1830 200 L 1840 180 M 1830 200 L 1790 185" stroke="url(#woodCarvingGold)" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Mega Mendung Subtle Carvings along lower beams -->
+  <g fill="none" stroke="#d4af37" stroke-width="1.4" opacity="0.35">
+    <path d="M 630 255 Q 650 248 670 255 Q 690 262 710 255 Q 730 248 750 255"/>
+    <path d="M 1170 255 Q 1190 248 1210 255 Q 1230 262 1250 255 Q 1270 248 1290 255"/>
+  </g>
+
+  <!-- =========================================================================
+       5. POLISHED WOODEN FLOOR (LANTAI PAPAN JATI KERATON)
+       ========================================================================= -->
+  <polygon points="0,900 1920,900 1920,1080 0,1080" fill="url(#floorWood)"/>
+  <line x1="0" y1="900" x2="1920" y2="900" stroke="#421f0b" stroke-width="5"/>
+  <!-- Perspective Floor Planks -->
+  <line x1="200" y1="900" x2="0" y2="1080" stroke="#2b1408" stroke-width="2" opacity="0.7"/>
+  <line x1="480" y1="900" x2="320" y2="1080" stroke="#2b1408" stroke-width="2" opacity="0.7"/>
+  <line x1="750" y1="900" x2="680" y2="1080" stroke="#2b1408" stroke-width="2" opacity="0.7"/>
+  <line x1="1170" y1="900" x2="1240" y2="1080" stroke="#2b1408" stroke-width="2" opacity="0.7"/>
+  <line x1="1440" y1="900" x2="1600" y2="1080" stroke="#2b1408" stroke-width="2" opacity="0.7"/>
+  <line x1="1720" y1="900" x2="1920" y2="1080" stroke="#2b1408" stroke-width="2" opacity="0.7"/>
+
+  <!-- =========================================================================
+       6. LAMPU ROBJONG / KUNINGAN ANTIK KERATON JAWA-SUNDA (GRAND CHANDELIER)
+       ========================================================================= -->
+  <g id="antique-chandelier">
+    <!-- Hanging Brass Rod & Chain -->
+    <line x1="960" y1="0" x2="960" y2="130" stroke="#cca138" stroke-width="5"/>
+    <circle cx="960" cy="50" r="7" fill="#ffe066"/>
+    <circle cx="960" cy="90" r="8" fill="#ffe066"/>
+
+    <!-- Central Ornate Brass Body -->
+    <ellipse cx="960" cy="145" rx="35" ry="16" fill="url(#woodCarvingGold)" stroke="#ffd700" stroke-width="2"/>
+    <path d="M 925 145 C 930 185 990 185 995 145 Z" fill="url(#woodCarvingGold)" stroke="#ffd700" stroke-width="1.8"/>
+    <circle cx="960" cy="185" r="7" fill="#ffd700"/>
+
+    <!-- Curled Brass Arms Left & Right -->
+    <path d="M 930 155 C 870 170 820 150 810 130" fill="none" stroke="#e6b800" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M 940 165 C 890 200 850 180 840 160" fill="none" stroke="#cca138" stroke-width="3" stroke-linecap="round"/>
+
+    <path d="M 990 155 C 1050 170 1100 150 1110 130" fill="none" stroke="#e6b800" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M 980 165 C 1030 200 1070 180 1080 160" fill="none" stroke="#cca138" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Glowing Lantern Bowls & Flames -->
+    <!-- Center Lamp -->
+    <circle cx="960" cy="170" r="14" fill="#fff5cc" filter="url(#softAtmosphere)"/>
+    <circle cx="960" cy="170" r="7" fill="#ffffff"/>
+    
+    <!-- Left Lamp 1 -->
+    <circle cx="810" cy="130" r="12" fill="#fff5cc" filter="url(#softAtmosphere)"/>
+    <circle cx="810" cy="130" r="6" fill="#ffffff"/>
+    <!-- Left Lamp 2 -->
+    <circle cx="840" cy="160" r="10" fill="#fff5cc" filter="url(#softAtmosphere)"/>
+    <circle cx="840" cy="160" r="5" fill="#ffffff"/>
+
+    <!-- Right Lamp 1 -->
+    <circle cx="1110" cy="130" r="12" fill="#fff5cc" filter="url(#softAtmosphere)"/>
+    <circle cx="1110" cy="130" r="6" fill="#ffffff"/>
+    <!-- Right Lamp 2 -->
+    <circle cx="1080" cy="160" r="10" fill="#fff5cc" filter="url(#softAtmosphere)"/>
+    <circle cx="1080" cy="160" r="5" fill="#ffffff"/>
+
+    <!-- Hanging Ronce Melati Garland from Chandelier -->
+    <g fill="#ffffff" opacity="0.9">
+      <circle cx="960" cy="200" r="4.5"/>
+      <circle cx="960" cy="215" r="4"/>
+      <circle cx="960" cy="230" r="3.8"/>
+      <circle cx="960" cy="245" r="3.5"/>
+      <circle cx="960" cy="260" r="4.2" fill="#e0475b"/> <!-- Red Rosebud tip -->
+    </g>
+  </g>
+
+  <!-- =========================================================================
+       7. ATMOSPHERIC LIGHTING & GLOW (GOLDEN ROYALE WARMTH)
+       ========================================================================= -->
+  <!-- Top Chandelier Glow (Warm radiant golden aura) -->
+  <ellipse cx="960" cy="220" rx="680" ry="380" fill="url(#chandelierGlow)" pointer-events="none"/>
+
+  <!-- Center Stage Radiance for Wedding Invitation Card -->
+  <circle cx="960" cy="550" r="540" fill="url(#centerStageGlow)" pointer-events="none"/>
+
+  <!-- Floating Jasmine Petals & Golden Fireflies / Sparkles -->
+  <g fill="#ffffff" opacity="0.75">
+    <ellipse cx="420" cy="350" rx="4" ry="7" transform="rotate(25 420 350)"/>
+    <ellipse cx="780" cy="290" rx="3.5" ry="6" transform="rotate(-35 780 290)"/>
+    <ellipse cx="1180" cy="310" rx="4" ry="7" transform="rotate(40 1180 310)"/>
+    <ellipse cx="1520" cy="380" rx="3.5" ry="6" transform="rotate(-20 1520 380)"/>
+    <ellipse cx="640" cy="620" rx="4" ry="7" transform="rotate(15 640 620)"/>
+    <ellipse cx="1290" cy="640" rx="4.5" ry="7.5" transform="rotate(-30 1290 640)"/>
+  </g>
+
+  <g fill="#ffd700">
+    <circle cx="700" cy="420" r="2.5" opacity="0.85"/>
+    <circle cx="1220" cy="440" r="3" opacity="0.9"/>
+    <circle cx="580" cy="740" r="2" opacity="0.7"/>
+    <circle cx="1340" cy="760" r="2.5" opacity="0.75"/>
+    <circle cx="960" cy="380" r="3" opacity="0.8"/>
+  </g>
+
+  <!-- Vignette Frame Edges for Cinematic Polish -->
+  <rect width="1920" height="1080" fill="none" stroke="#000000" stroke-width="40" opacity="0.35"/>
+</svg>

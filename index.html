@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>The Wedding of Ilham & Risa — 16 Oktober 2026</title>
+  
+  <!-- SEO & Social Sharing Open Graph Meta Tags -->
+  <meta name="description" content="Undangan Pernikahan Online Ilham & Risa — Jumat, 16 Oktober 2026 di Banyuwangi. Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir.">
+  <meta property="og:title" content="The Wedding of Ilham & Risa — 16 Oktober 2026">
+  <meta property="og:description" content="Undangan Pernikahan Online — Jumat, 16 Oktober 2026 di Banyuwangi (Akad di KUA Kec. Banyuwangi & Resepsi di Jl. Musi No 78 Banyuwangi).">
+  <meta property="og:image" content="assets/images/javanese_wedding_hero.jpg">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#2d0810">
+
+  <!-- Google Fonts Preconnect & Stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Amiri:ital@0;1&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,700,100,1;1,9..144,700,100,1&family=Great+Vibes&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Falling Petals & Gold Dust Canvas -->
+  <canvas id="petal-canvas"></canvas>
+  <div class="bg-ambient-layer"></div>
+
+  <!-- Background Audio Element -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="assets/audio/dayasmara_reff.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Floating Audio Button -->
+  <button id="floating-audio-btn" class="floating-audio-btn" aria-label="Toggle Music">
+    <svg viewBox="0 0 24 24">
+      <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+    </svg>
+  </button>
+
+  <!-- ==========================================================================
+       COVER / ENVELOPE GATE (MODAL OVERLAY)
+       ========================================================================== -->
+  <div id="cover-screen" class="cover-screen">
+    <div class="cover-background-image"></div>
+    <div class="cover-overlay-gradient"></div>
+
+    <div class="cover-content">
+      <div class="cover-gunungan-wrapper">
+        <img src="assets/images/gunungan_ornament.svg" alt="Gunungan Wayang Kulit Jawa" class="cover-gunungan-img">
+      </div>
+      <div class="wedding-header-tag">The Wedding Of</div>
+      <h1 class="cover-wedding-title">
+        Ilham <span class="title-ampersand">&</span> Risa
+      </h1>
+      <div class="wedding-date-text">Jumat, 16 Oktober 2026</div>
+
+      <!-- Symmetrical Floral Ornament Divider -->
+      <div class="wedding-flourish-divider">
+        <svg viewBox="0 0 500 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="20" y1="25" x2="190" y2="25" stroke="currentColor" stroke-width="1.8"/>
+          <circle cx="20" cy="25" r="2.5" fill="currentColor"/>
+          
+          <path d="M 190 25 C 205 25 214 14 209 9 C 204 4 195 12 205 22 C 212 28 225 25 235 25" stroke="currentColor" stroke-width="1.8" fill="none"/>
+          <circle cx="201" cy="11" r="2.5" fill="currentColor"/>
+          <path d="M 215 25 C 220 37 234 39 239 31 C 241 27 235 25 225 25 Z" fill="currentColor" opacity="0.9"/>
+
+          <path d="M 250 8 C 244 17 244 28 250 36 C 256 28 256 17 250 8 Z" fill="currentColor"/>
+          <path d="M 248 15 C 239 17 235 26 244 32 C 246 25 247 19 248 15 Z" fill="currentColor" opacity="0.9"/>
+          <path d="M 252 15 C 261 17 265 26 256 32 C 254 25 253 19 252 15 Z" fill="currentColor" opacity="0.9"/>
+          <circle cx="250" cy="5" r="2.2" fill="currentColor"/>
+
+          <path d="M 310 25 C 295 25 286 14 291 9 C 296 4 305 12 295 22 C 288 28 275 25 265 25" stroke="currentColor" stroke-width="1.8" fill="none"/>
+          <circle cx="299" cy="11" r="2.5" fill="currentColor"/>
+          <path d="M 285 25 C 280 37 266 39 261 31 C 259 27 265 25 275 25 Z" fill="currentColor" opacity="0.9"/>
+
+          <line x1="310" y1="25" x2="480" y2="25" stroke="currentColor" stroke-width="1.8"/>
+          <circle cx="480" cy="25" r="2.5" fill="currentColor"/>
+        </svg>
+      </div>
+
+      <div class="cover-guest-card">
+        <div class="guest-salutation">Kepada Yth. Bapak/Ibu/Saudara/i:</div>
+        <div id="guest-name" class="guest-name">Tamu Undangan</div>
+        <div class="guest-note">*Mohon maaf bila ada kesalahan penulisan nama/gelar</div>
+      </div>
+
+      <button id="btn-open-invitation" class="btn-open-invitation">
+        <svg viewBox="0 0 24 24">
+          <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+        Buka Undangan
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MAIN CONTENT CONTAINER
+       ========================================================================== -->
+  <main>
+    <!-- 1. HERO SECTION & SALAM PEMBUKA (KONSEP JAWA KLASIK) -->
+    <section id="hero" class="hero-section">
+      <div class="container fade-in-up">
+        
+        <!-- Frame Kartu Konsep Adat Jawa Sesuai Referensi -->
+        <div class="javanese-concept-card">
+          <!-- Hiasan Sudut Dedaunan Kanopi -->
+          <div class="card-corner-foliage foliage-left"></div>
+          <div class="card-corner-foliage foliage-right"></div>
+
+          <!-- Gunungan Wayang Ornamen di Bagian Atas -->
+          <div class="javanese-gunungan-top">
+            <img src="assets/images/gunungan_ornament.svg" alt="Gunungan Wayang Kulit Jawa">
+          </div>
+
+          <!-- Kaligrafi Salam Pembuka Khas Referensi -->
+          <h2 class="javanese-salam-title">Assalamu'alaikum Wr. Wb.</h2>
+
+          <!-- Teks Permohonan Kehadiran & Doa Restu Sesuai Referensi -->
+          <div class="javanese-salam-text">
+            <p>Dengan memohon rahmat dan ridho</p>
+            <p>kehadirat Allah SWT Kami Mengharapkan</p>
+            <p>kehadiran dan do'a restu Bapak/Ibu/Saudara/i</p>
+            <p>pada acara pernikahan kami</p>
+          </div>
+
+          <!-- Centerpiece Artwork: Mempelai di Depan Joglo & Candi Prambanan -->
+          <div class="javanese-hero-art-container">
+            <div class="javanese-hero-art-frame">
+              <img src="assets/images/hero.jpeg" alt="Ilham & Risa" class="javanese-hero-img" loading="eager">
+              <div class="javanese-art-gold-border"></div>
+            </div>
+          </div>
+
+          <!-- Identitas Pasangan & Tanggal Bahagia -->
+          <div class="javanese-card-footer">
+            <div class="wedding-header-tag">The Wedding Of</div>
+            <h1 class="hero-wedding-title">
+              Ilham <span class="title-ampersand">&</span> Risa
+            </h1>
+            <div class="wedding-date-text">Jumat, 16 Oktober 2026</div>
+
+            <div class="wedding-flourish-divider">
+              <svg viewBox="0 0 500 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="20" y1="25" x2="190" y2="25" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="20" cy="25" r="2.5" fill="currentColor"/>
+                
+                <path d="M 190 25 C 205 25 214 14 209 9 C 204 4 195 12 205 22 C 212 28 225 25 235 25" stroke="currentColor" stroke-width="1.8" fill="none"/>
+                <circle cx="201" cy="11" r="2.5" fill="currentColor"/>
+                <path d="M 215 25 C 220 37 234 39 239 31 C 241 27 235 25 225 25 Z" fill="currentColor" opacity="0.9"/>
+
+                <path d="M 250 8 C 244 17 244 28 250 36 C 256 28 256 17 250 8 Z" fill="currentColor"/>
+                <path d="M 248 15 C 239 17 235 26 244 32 C 246 25 247 19 248 15 Z" fill="currentColor" opacity="0.9"/>
+                <path d="M 252 15 C 261 17 265 26 256 32 C 254 25 253 19 252 15 Z" fill="currentColor" opacity="0.9"/>
+                <circle cx="250" cy="5" r="2.2" fill="currentColor"/>
+
+                <path d="M 310 25 C 295 25 286 14 291 9 C 296 4 305 12 295 22 C 288 28 275 25 265 25" stroke="currentColor" stroke-width="1.8" fill="none"/>
+                <circle cx="299" cy="11" r="2.5" fill="currentColor"/>
+                <path d="M 285 25 C 280 37 266 39 261 31 C 259 27 265 25 275 25 Z" fill="currentColor" opacity="0.9"/>
+
+                <line x1="310" y1="25" x2="480" y2="25" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="480" cy="25" r="2.5" fill="currentColor"/>
+              </svg>
+            </div>
+
+            
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. QUOTE / AYAT SECTION -->
+    <section id="quote" class="quote-section">
+      <div class="container fade-in-up">
+        <div class="quote-card">
+          <div class="arabic-text">
+            وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ
+          </div>
+          <p class="quote-translation">
+            "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berpikir."
+          </p>
+          <div class="quote-source">— QS. Ar-Rum: 21 —</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. MEMPELAI (THE HAPPY COUPLE) -->
+    <section id="couple" class="couple-section">
+      <div class="container">
+        <div class="section-title fade-in-up">
+          <span class="section-subtitle">Mempelai Pengantin</span>
+        
+          <div class="ornament-divider">
+            <span></span>
+            <img src="assets/images/gunungan_ornament.svg" alt="Gunungan Wayang Jawa">
+            <span></span>
+          </div>
+          <p style="font-size: 0.95rem; color: var(--text-muted); margin-top: 0.8rem;">
+            Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta'ala, kami bermaksud melangsungkan pernikahan kami:
+          </p>
+        </div>
+
+        <div class="couple-grid">
+          <div class="couple-ampersand-divider">&</div>
+
+          <!-- Groom -->
+          <div class="couple-card fade-in-up">
+            <div class="couple-avatar-wrapper">
+              <div class="couple-avatar-ring"></div>
+              <div class="couple-avatar-image">
+                <img src="assets/images/mempelai_pria.jpeg" alt="Muhamad Ilham Rosidi - Pengantin Pria" style="object-position: center top;">
+              </div>
+            </div>
+            <h3 class="couple-name">Muhamad Ilham Rosidi</h3>
+            <p class="couple-parents">
+              Putra dari:<br>
+              <strong>Bpk. Irwan Yudi</strong><br>&<br>
+              <strong>Ibu Reni Sumarianingsih</strong>
+            </p>
+          </div>
+
+          <!-- Bride -->
+          <div class="couple-card fade-in-up delay-1">
+            <div class="couple-avatar-wrapper">
+              <div class="couple-avatar-ring"></div>
+              <div class="couple-avatar-image">
+                <img src="assets/images/mempelai_wanita.jpeg" alt="Risa Nurul Asiah - Pengantin Wanita" style="object-position: center top;">
+              </div>
+            </div>
+            <h3 class="couple-name">Risa Nurul Asiah</h3>
+            <p class="couple-parents">
+              Putri dari:<br>
+              <strong>Bapak Ribut Saiful Arif</strong><br>&<br>
+              <strong>Ibu Nining Sholihah</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. EVENT DETAILS & COUNTDOWN (16 OKTOBER 2026) -->
+    <section id="event" class="event-section">
+      <div class="container">
+        <div class="section-title fade-in-up">
+          <span class="section-subtitle">Waktu & Tempat</span>
+          <h2 class="section-heading">Rangkaian Acara</h2>
+          <div class="ornament-divider">
+            <span></span>
+            <img src="assets/images/gunungan_ornament.svg" alt="Gunungan Wayang Jawa">
+            <span></span>
+          </div>
+        </div>
+
+        <!-- Countdown Timer -->
+        <div class="countdown-box fade-in-up">
+          <div class="countdown-title">Hitung Mundur Menuju Akad Nikah</div>
+          <div id="countdown-timer" class="countdown-timer">
+            <div class="countdown-unit">
+              <div id="cd-days" class="countdown-number">00</div>
+              <div class="countdown-label">Hari</div>
+            </div>
+            <div class="countdown-unit">
+              <div id="cd-hours" class="countdown-number">00</div>
+              <div class="countdown-label">Jam</div>
+            </div>
+            <div class="countdown-unit">
+              <div id="cd-minutes" class="countdown-number">00</div>
+              <div class="countdown-label">Menit</div>
+            </div>
+            <div class="countdown-unit">
+              <div id="cd-seconds" class="countdown-number">00</div>
+              <div class="countdown-label">Detik</div>
+            </div>
+          </div>
+
+          <div class="calendar-btn-wrapper">
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=The+Wedding+of+Ilham+%26+Risa&dates=20261016T060000Z/20261016T150000Z&details=Pernikahan+Ilham+%26+Risa%0AAkad:+13.00-14.00+WIB+di+KUA+Kec.+Banyuwangi%0AResepsi:+18.00-Selesai+di+Kediaman+Mempelai+Pria+Jl.+Musi+No+78+Banyuwangi&location=Jl.+Musi+No+78+GG.+Kenanga+Kecamatan+Banyuwangi+Kabupaten+Banyuwangi" target="_blank" rel="noopener noreferrer" class="btn-calendar">
+              <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+              Simpan ke Google Calendar
+            </a>
+          </div>
+        </div>
+
+        <!-- Event Cards (Akad & Resepsi) -->
+        <div class="event-cards-grid">
+          <!-- Akad Nikah -->
+          <div class="event-card fade-in-up">
+            <div class="event-type-badge">Akad Nikah</div>
+            <div class="event-date">Jumat, 16 Oktober 2026</div>
+            <div class="event-time">Pukul 13.00 - Selesai</div>
+            <div class="event-location-name">Kantor KUA Kec. Banyuwangi</div>
+            <p class="event-address">
+              Jl. Jaksa Agung Suprapto No.30, Penganjuran, Kec. Banyuwangi, Kabupaten Banyuwangi, Jawa Timur 68416
+            </p>
+            <a href="https://maps.google.com/?q=Kantor+KUA+Kecamatan+Banyuwangi" target="_blank" rel="noopener noreferrer" class="btn-location-map">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              Petunjuk Lokasi (KUA)
+            </a>
+          </div>
+
+          <!-- Resepsi Pernikahan -->
+          <div class="event-card fade-in-up delay-1">
+            <div class="event-type-badge">Resepsi Pernikahan</div>
+            <div class="event-date">Jumat, 16 Oktober 2026</div>
+            <div class="event-time">Pukul 18.00 WIB - Selesai</div>
+            <div class="event-location-name">Kediaman Mempelai Laki-laki</div>
+            <p class="event-address">
+              Jl. Musi No 78 GG. Kenanga, Kecamatan Banyuwangi, Kabupaten Banyuwangi, Jawa Timur
+            </p>
+            <a href="https://maps.google.com/?q=Jl.+Musi+No+78+GG.+Kenanga+Kecamatan+Banyuwangi+Kabupaten+Banyuwangi" target="_blank" rel="noopener noreferrer" class="btn-location-map">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              Petunjuk Lokasi (Resepsi)
+            </a>
+          </div>
+        </div>
+
+        <!-- Venue Embed Box -->
+        <div class="venue-embed-box fade-in-up">
+          <iframe 
+            src="https://maps.google.com/maps?q=Jl.+Musi+No+78+GG.+Kenanga+Kecamatan+Banyuwangi+Kabupaten+Banyuwangi&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade" 
+            title="Lokasi Acara Resepsi">
+          </iframe>
+          <div class="venue-footer-info">
+            <span>📍 Kediaman Mempelai Pria: Jl. Musi No 78 GG. Kenanga, Kec. Banyuwangi, Kab. Banyuwangi</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. DIGITAL GIFT / WEDDING GIFT -->
+    <section id="gift" class="gift-section">
+      <div class="container">
+        <div class="section-title fade-in-up">
+          <span class="section-subtitle">Tanda Kasih</span>
+          <h2 class="section-heading">Wedding Gift</h2>
+          <div class="ornament-divider">
+            <span></span>
+            <img src="assets/images/gunungan_ornament.svg" alt="Gunungan Wayang Jawa">
+            <span></span>
+          </div>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.8rem; max-width: 580px; margin-left: auto; margin-right: auto;">
+            Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Dan jika memberi adalah ungkapan tanda kasih Anda, Anda dapat memberi kado secara cashless:
+          </p>
+        </div>
+
+        <div class="gift-card-container">
+          <!-- BCA -->
+          <div class="bank-card fade-in-up">
+            <div>
+              <div class="bank-card-header">
+                <div class="bank-chip"></div>
+                <div class="bank-logo-text">BCA</div>
+              </div>
+              <div class="bank-card-number">1801 9907 33</div>
+              <div class="bank-card-holder">a/n Muhamad Ilham Rosidi</div>
+            </div>
+            <button class="btn-copy" data-copy="1801990733">
+              <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+              Salin Nomor Rekening
+            </button>
+          </div>
+
+          <!-- Mandiri -->
+          <div class="bank-card fade-in-up delay-1">
+            <div>
+              <div class="bank-card-header">
+                <div class="bank-chip"></div>
+                <div class="bank-logo-text">MANDIRI</div>
+              </div>
+              <div class="bank-card-number">1420 0243 1328 9</div>
+              <div class="bank-card-holder">a/n Risa Nurul Asiah</div>
+            </div>
+            <button class="btn-copy" data-copy="1420024313289">
+              <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+              Salin Nomor Rekening
+            </button>
+          </div>
+        </div>
+
+        <!-- Physical Gift Delivery -->
+        <div class="physical-gift-card fade-in-up">
+          <div class="physical-gift-title">📦 Pengiriman Kado Fisik</div>
+          <p class="physical-gift-desc">
+            Jl. Musi No 78 GG. Kenanga, Kecamatan Banyuwangi, Kabupaten Banyuwangi, Jawa Timur<br>
+            Penerima: <strong>Muhamad Ilham Rosidi / Risa Nurul Asiah (0812-9876-5432)</strong>
+          </p>
+          <button class="btn-copy" style="max-width: 250px; margin: 0 auto;" data-copy="Jl. Musi No 78 GG. Kenanga, Kecamatan Banyuwangi, Kabupaten Banyuwangi, Jawa Timur (Penerima: Muhamad Ilham Rosidi / Risa Nurul Asiah - 081298765432)">
+            <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+            Salin Alamat Lengkap
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. RSVP & GUESTBOOK (UCAPAN & DOA) -->
+    <section id="rsvp" class="rsvp-section">
+      <div class="container">
+        <div class="section-title fade-in-up">
+          <span class="section-subtitle">Konfirmasi Kehadiran</span>
+          <h2 class="section-heading">RSVP & Ucapan Doa</h2>
+          <div class="ornament-divider">
+            <span></span>
+            <img src="assets/images/siger_ornament.svg" alt="Siger Sunda">
+            <span></span>
+          </div>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.8rem;">
+            Mohon konfirmasikan kehadiran Bapak/Ibu/Saudara/i untuk memudahkan pengaturan tempat dan jamuan acara.
+          </p>
+        </div>
+
+        <div class="rsvp-wrapper">
+          <!-- RSVP Form -->
+          <div class="rsvp-form-card fade-in-up">
+            <h3 class="card-inner-title">
+              <svg width="20" height="20" fill="var(--primary-gold)" viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+              Konfirmasi Kehadiran
+            </h3>
+            <p class="card-inner-subtitle">Isi formulir di bawah ini:</p>
+
+            <form id="rsvp-form">
+              <div class="form-group">
+                <label for="rsvp-name" class="form-label">Nama Lengkap</label>
+                <input type="text" id="rsvp-name" class="form-input" placeholder="Contoh: Bpk. Bambang Wijaya" required>
+              </div>
+
+              <div class="form-group">
+                <label for="rsvp-attendance" class="form-label">Konfirmasi Kehadiran</label>
+                <select id="rsvp-attendance" class="form-select">
+                  <option value="hadir">✓ Ya, Saya Akan Hadir</option>
+                  <option value="tidak-hadir">✗ Mohon Maaf, Tidak Dapat Hadir</option>
+                  <option value="ragu">? Masih Ragu-ragu</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="rsvp-message" class="form-label">Ucapan & Doa Restu</label>
+                <textarea id="rsvp-message" class="form-textarea" placeholder="Tuliskan doa dan ucapan selamat untuk kedua mempelai..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit-rsvp">Kirim Konfirmasi & Ucapan</button>
+            </form>
+          </div>
+
+          <!-- Wishes / Guestbook Feed -->
+          <div class="guestbook-feed-card fade-in-up delay-1">
+            <div style="display: flex; align-items: center; margin-bottom: 0.3rem;">
+              <h3 class="card-inner-title">
+                <svg width="20" height="20" fill="var(--primary-gold)" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                Doa & Ucapan
+              </h3>
+              <span id="wishes-counter" class="guestbook-counter">0 Ucapan</span>
+            </div>
+            <p class="card-inner-subtitle">Doa tulus dari keluarga dan sahabat tercinta:</p>
+
+            <div id="wishes-list" class="wishes-list">
+              <!-- Dynamically rendered by app.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. FOOTER SECTION -->
+    <footer id="footer" class="footer-section">
+      <div class="container fade-in-up">
+        <h2 class="footer-names">Ilham & Risa</h2>
+        <p class="footer-thanks">
+          Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kami.
+        </p>
+        <div style="font-family: var(--font-script); font-size: 1.8rem; color: var(--primary-gold-light); margin-bottom: 1rem;">
+          Wassalamu'alaikum Warahmatullahi Wabarakatuh
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 2rem;">
+          Keluarga Besar Bapak Irwan Yudi & Ibu Reni Sumarianingsih<br>
+          Keluarga Besar Bapak Ribut Saiful Arif & Ibu Nining Sholihah
+        </p>
+        <div class="footer-credit">
+          © 2026 The Wedding of Ilham & Risa. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- ==========================================================================
+       BOTTOM FLOATING NAVIGATION
+       ========================================================================== -->
+  <nav class="bottom-nav-bar" aria-label="Main Navigation">
+    <a href="#hero" class="nav-link-item active" title="Cover">
+      <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+      <span>Home</span>
+    </a>
+    <a href="#couple" class="nav-link-item" title="Mempelai">
+      <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+      <span>Couple</span>
+    </a>
+    <a href="#event" class="nav-link-item" title="Acara">
+      <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10z"/></svg>
+      <span>Acara</span>
+    </a>
+    <a href="#gift" class="nav-link-item" title="Gift">
+      <svg viewBox="0 0 24 24"><path d="M20 6h-2.18c.11-.31.18-.65.18-1 0-1.66-1.34-3-3-3-1.05 0-1.96.54-2.5 1.35l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76l1-1.36 1 1.36L15.38 12 17 10.83 14.92 8H20v6z"/></svg>
+      <span>Gift</span>
+    </a>
+    <a href="#rsvp" class="nav-link-item" title="RSVP">
+      <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+      <span>RSVP</span>
+    </a>
+  </nav>
+
+  <!-- Toast Notification -->
+  <div id="toast-notification" class="toast-notification" role="status" aria-live="polite">
+    ✓ Berhasil disalin!
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/petals.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

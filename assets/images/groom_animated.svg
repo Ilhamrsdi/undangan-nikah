@@ -1,0 +1,196 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="goldBeskap" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff0a8"/>
+      <stop offset="40%" stop-color="#e2b020"/>
+      <stop offset="75%" stop-color="#aa7c11"/>
+      <stop offset="100%" stop-color="#684a00"/>
+    </linearGradient>
+    <linearGradient id="velvetBeskap" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#241b2b"/>
+      <stop offset="40%" stop-color="#18131d"/>
+      <stop offset="100%" stop-color="#0f0c13"/>
+    </linearGradient>
+    <linearGradient id="skinGroom" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff0e6"/>
+      <stop offset="100%" stop-color="#fcd8c7"/>
+    </linearGradient>
+    <linearGradient id="blangkonBatik" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a2a16"/>
+      <stop offset="50%" stop-color="#321b0d"/>
+      <stop offset="100%" stop-color="#1e0f06"/>
+    </linearGradient>
+    <pattern id="batikPatternGroom" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <rect width="14" height="14" fill="#351d0e"/>
+      <path d="M 0 0 L 14 14 M 14 0 L 0 14" stroke="#4c2914" stroke-width="1.2"/>
+      <circle cx="7" cy="7" r="1.5" fill="#a87c3e" opacity="0.85"/>
+      <circle cx="0" cy="0" r="1" fill="#d9b168" opacity="0.8"/>
+      <circle cx="14" cy="14" r="1" fill="#d9b168" opacity="0.8"/>
+      <circle cx="14" cy="0" r="1" fill="#d9b168" opacity="0.8"/>
+      <circle cx="0" cy="14" r="1" fill="#d9b168" opacity="0.8"/>
+    </pattern>
+
+    <!-- Filters -->
+    <filter id="softGlowGroom" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="dropShadowGroom" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+
+    <style>
+      @keyframes groomBreathe {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-4px) rotate(-0.4deg); }
+      }
+      @keyframes goldGlint {
+        0%, 100% { opacity: 0.3; transform: scale(0.8); }
+        50% { opacity: 1; transform: scale(1.25); }
+      }
+      .anim-groom-body {
+        transform-origin: 200px 380px;
+        animation: groomBreathe 4.8s ease-in-out infinite;
+      }
+      .glint {
+        animation: goldGlint 2.8s ease-in-out infinite;
+      }
+      .g1 { animation-delay: 0.4s; }
+      .g2 { animation-delay: 1.4s; }
+    </style>
+  </defs>
+
+  <!-- Halo Aura -->
+  <circle cx="200" cy="230" r="175" fill="none" stroke="url(#goldBeskap)" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.4"/>
+  <circle cx="200" cy="230" r="160" fill="rgba(212, 175, 55, 0.04)"/>
+
+  <!-- Character Group with Floating Breathing Animation -->
+  <g class="anim-groom-body" filter="url(#dropShadowGroom)">
+    <!-- Beskap Coat Base -->
+    <path d="M 115 310 Q 105 365 95 450 L 305 450 Q 295 365 285 310 Q 245 285 200 285 Q 155 285 115 310 Z" fill="url(#velvetBeskap)"/>
+
+    <!-- Beskap High Mandarin/Javanese Collar -->
+    <path d="M 172 260 C 170 280 182 288 200 288 C 218 288 230 280 228 260 Z" fill="url(#velvetBeskap)" stroke="url(#goldBeskap)" stroke-width="2.5"/>
+    <path d="M 180 262 L 200 282 L 220 262" fill="none" stroke="url(#goldBeskap)" stroke-width="2"/>
+
+    <!-- White Inner Shirt Peak -->
+    <polygon points="194,272 200,280 206,272" fill="#ffffff"/>
+
+    <!-- Gold Embroidered Front Trim (Bordir Beskap Kencana) -->
+    <path d="M 200 288 L 200 450" stroke="url(#goldBeskap)" stroke-width="4" stroke-dasharray="3 5"/>
+    <path d="M 188 295 L 188 450" stroke="url(#goldBeskap)" stroke-width="1.8" opacity="0.7"/>
+    <path d="M 212 295 L 212 450" stroke="url(#goldBeskap)" stroke-width="1.8" opacity="0.7"/>
+
+    <!-- Golden Buttons -->
+    <circle cx="200" cy="315" r="4.5" fill="url(#goldBeskap)"/>
+    <circle cx="200" cy="345" r="4.5" fill="url(#goldBeskap)"/>
+    <circle cx="200" cy="375" r="4.5" fill="url(#goldBeskap)"/>
+    <circle cx="200" cy="405" r="4.5" fill="url(#goldBeskap)"/>
+
+    <!-- Gold Pocket Watch Chain / Rantai Kancing Kencana -->
+    <path d="M 200 345 Q 170 360 162 340" fill="none" stroke="url(#goldBeskap)" stroke-width="2"/>
+    <circle cx="162" cy="340" r="3" fill="url(#goldBeskap)"/>
+
+    <!-- Ronce Melati Dada (Jasmine Boutonniere on Left Chest) -->
+    <g id="melati-dada">
+      <circle cx="236" cy="320" r="5" fill="#ffffff" stroke="#d5e2d5" stroke-width="1"/>
+      <circle cx="242" cy="326" r="4.5" fill="#ffffff" stroke="#d5e2d5" stroke-width="1"/>
+      <circle cx="233" cy="332" r="4" fill="#ffffff" stroke="#d5e2d5" stroke-width="1"/>
+      <!-- Hanging Jasmine Buds -->
+      <circle cx="238" cy="342" r="3.5" fill="#ffffff"/>
+      <circle cx="237" cy="351" r="3" fill="#ffffff"/>
+      <circle cx="236" cy="360" r="4" fill="#e0475b"/> <!-- Small Red Accent -->
+      <path d="M 240 316 Q 248 312 245 324" fill="#4a7c59"/>
+    </g>
+
+    <!-- Neck -->
+    <path d="M 182 220 L 182 265 C 182 272 218 272 218 265 L 218 220 Z" fill="url(#skinGroom)"/>
+
+    <!-- Face Shape (Handsome masculine jawline with soft anime aesthetic) -->
+    <path d="M 152 165 C 152 135 168 125 200 125 C 232 125 248 135 248 165 C 248 210 226 238 200 238 C 174 238 152 210 152 165 Z" fill="url(#skinGroom)"/>
+
+    <!-- Ears -->
+    <ellipse cx="149" cy="172" rx="6.5" ry="11" fill="url(#skinGroom)"/>
+    <ellipse cx="251" cy="172" rx="6.5" ry="11" fill="url(#skinGroom)"/>
+
+    <!-- Cheeks Blush -->
+    <ellipse cx="170" cy="188" rx="9" ry="5" fill="#ff7f7f" opacity="0.25"/>
+    <ellipse cx="230" cy="188" rx="9" ry="5" fill="#ff7f7f" opacity="0.25"/>
+
+    <!-- Eyes (Friendly, handsome anime style) -->
+    <!-- Left Eye -->
+    <g>
+      <ellipse cx="178" cy="174" rx="7.5" ry="8.5" fill="#201510"/>
+      <circle cx="176" cy="171" r="3" fill="#ffffff"/>
+      <circle cx="180" cy="177" r="1.4" fill="#ffffff"/>
+      <!-- Eyelid line -->
+      <path d="M 169 168 Q 178 163 187 167" fill="none" stroke="#1f140e" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+    <!-- Right Eye -->
+    <g>
+      <ellipse cx="222" cy="174" rx="7.5" ry="8.5" fill="#201510"/>
+      <circle cx="220" cy="171" r="3" fill="#ffffff"/>
+      <circle cx="224" cy="177" r="1.4" fill="#ffffff"/>
+      <!-- Eyelid line -->
+      <path d="M 213 167 Q 222 163 231 168" fill="none" stroke="#1f140e" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+
+    <!-- Manly Handsome Eyebrows -->
+    <path d="M 166 156 Q 177 150 189 154" fill="none" stroke="#241b2b" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 211 154 Q 223 150 234 156" fill="none" stroke="#241b2b" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Nose -->
+    <path d="M 200 174 L 198 186 L 203 186" fill="none" stroke="#dca28e" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Warm Smile -->
+    <path d="M 191 204 Q 200 214 209 204" fill="none" stroke="#b04a5a" stroke-width="2.8" stroke-linecap="round"/>
+
+    <!-- BLANGKON JAWA (Authentic Traditional Javanese Batik Headdress) -->
+    <g id="blangkon-jawa" filter="url(#softGlowGroom)">
+      <!-- Mondholan (Tonjolan Bulat Khas Blangkon Jawa di Belakang Kepala) -->
+      <ellipse cx="250" cy="132" rx="14" ry="16" fill="#241308" stroke="#160b05" stroke-width="1.2"/>
+      <path d="M 242 122 C 255 126 260 138 250 146" fill="none" stroke="#6b4423" stroke-width="1.5" opacity="0.7"/>
+
+      <!-- Hair sideburns peeking naturally under Blangkon -->
+      <path d="M 152 160 L 152 174 L 157 167 Z" fill="#1b120c"/>
+      <path d="M 248 160 L 248 174 L 243 167 Z" fill="#1b120c"/>
+
+      <!-- Blangkon Dome Base (Batok Udeng Blangkon) -->
+      <path d="M 142 148 C 140 85 168 68 200 68 C 232 68 260 85 258 148 C 252 143 234 138 200 140 C 166 138 148 143 142 148 Z" fill="url(#blangkonBatik)"/>
+      <path d="M 142 148 C 140 85 168 68 200 68 C 232 68 260 85 258 148 C 252 143 234 138 200 140 C 166 138 148 143 142 148 Z" fill="url(#batikPatternGroom)" opacity="0.6"/>
+
+      <!-- Side Flaps (Cangklokan Pelipis Blangkon) -->
+      <path d="M 142 146 L 140 160 L 147 154 Z" fill="#351d0e"/>
+      <path d="M 258 146 L 260 160 L 253 154 Z" fill="#351d0e"/>
+
+      <!-- Curved Fold Lines of Javanese Headcloth (Lipatan Kain Udeng) -->
+      <path d="M 152 125 Q 196 96 248 118" fill="none" stroke="#1d0e06" stroke-width="2.2" opacity="0.85"/>
+      <path d="M 162 108 Q 200 82 238 104" fill="none" stroke="#1d0e06" stroke-width="2" opacity="0.85"/>
+      <path d="M 174 94 Q 202 76 228 90" fill="none" stroke="#1d0e06" stroke-width="1.8" opacity="0.75"/>
+
+      <!-- Wiron Pleats (Lipatan Kain Batik Bersilang di Dahi Khas Adat Jawa) -->
+      <path d="M 142 148 Q 170 142 200 145 Q 230 142 258 148 L 257 154 Q 228 147 200 150 Q 172 147 143 154 Z" fill="#3e2212" stroke="#221107" stroke-width="1"/>
+      
+      <!-- Left Wiron diagonal fold -->
+      <path d="M 143 154 C 162 145 182 142 201 146 L 201 152 C 180 148 162 151 143 158 Z" fill="#4a2916" stroke="#5d341b" stroke-width="0.8"/>
+      <!-- Right Wiron diagonal fold overlapping -->
+      <path d="M 257 154 C 238 145 218 142 199 146 L 199 152 C 220 148 238 151 257 158 Z" fill="#442513" stroke="#5d341b" stroke-width="0.8"/>
+      
+      <!-- Fine Javanese Wiron Pleat Lines (Sumping & trap wiron batik) -->
+      <path d="M 148 149 Q 174 142 200 146" fill="none" stroke="#caa262" stroke-width="1.3" opacity="0.8"/>
+      <path d="M 152 144 Q 176 137 200 141" fill="none" stroke="#caa262" stroke-width="1.3" opacity="0.8"/>
+      <path d="M 252 149 Q 226 142 200 146" fill="none" stroke="#a67c38" stroke-width="1.3" opacity="0.8"/>
+      <path d="M 248 144 Q 224 137 200 141" fill="none" stroke="#a67c38" stroke-width="1.3" opacity="0.8"/>
+
+      <!-- Center Fold Apex (Pertemuan Wiron Dahi Klasik) -->
+      <path d="M 197 144 L 200 150 L 203 144 Z" fill="#7a4623" stroke="#caa262" stroke-width="0.8"/>
+    </g>
+  </g>
+
+  <!-- Golden Sparkle Accents -->
+  <g fill="#ffd700">
+    <path class="glint g1" d="M 145 285 Q 145 277 140 277 Q 145 277 145 269 Q 145 277 150 277 Q 145 277 145 285 Z"/>
+    <path class="glint g2" d="M 255 295 Q 255 287 250 287 Q 255 287 255 279 Q 255 287 260 287 Q 255 287 255 295 Z"/>
+  </g>
+</svg>

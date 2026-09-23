@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 160" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldGunungan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff4ba"/>
+      <stop offset="30%" stop-color="#e6b800"/>
+      <stop offset="70%" stop-color="#b8860b"/>
+      <stop offset="100%" stop-color="#735000"/>
+    </linearGradient>
+    <filter id="goldGlowSmall">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#goldGlowSmall)">
+    <!-- Base Handle (Cempurit Wayang) -->
+    <path d="M 58 135 L 58 160 L 62 160 L 62 135 Z" fill="url(#goldGunungan)"/>
+    <ellipse cx="60" cy="135" rx="14" ry="5" fill="url(#goldGunungan)"/>
+
+    <!-- Main Gunungan Leaf Boundary -->
+    <path d="M 60 5 C 68 25 105 55 110 90 C 114 118 98 132 80 135 C 70 136 50 136 40 135 C 22 132 6 118 10 90 C 15 55 52 25 60 5 Z" 
+          fill="rgba(197, 155, 39, 0.12)" stroke="url(#goldGunungan)" stroke-width="2.5"/>
+
+    <!-- Inner Sacred Border -->
+    <path d="M 60 16 C 66 32 96 58 100 88 C 103 112 88 124 74 126 C 66 127 54 127 46 126 C 32 124 17 112 20 88 C 24 58 54 32 60 16 Z" 
+          fill="none" stroke="url(#goldGunungan)" stroke-width="1.2" stroke-dasharray="2 3"/>
+
+    <!-- Central Axis (Sumbu Hyang) -->
+    <line x1="60" y1="12" x2="60" y2="128" stroke="url(#goldGunungan)" stroke-width="1.8"/>
+
+    <!-- Gapura Rumah Suci / Holy Portal (Javanese Arch at base) -->
+    <path d="M 44 126 L 44 98 C 44 88 76 88 76 98 L 76 126 Z" fill="none" stroke="url(#goldGunungan)" stroke-width="1.8"/>
+    <path d="M 48 126 L 48 102 C 48 94 72 94 72 102 L 72 126 Z" fill="rgba(212, 175, 55, 0.25)" stroke="url(#goldGunungan)" stroke-width="1"/>
+    
+    <!-- Tree of Life Branches (Pohon Hayat / Kalpataru) -->
+    <path d="M 60 85 Q 40 70 30 80 Q 45 74 60 80" fill="url(#goldGunungan)"/>
+    <path d="M 60 85 Q 80 70 90 80 Q 75 74 60 80" fill="url(#goldGunungan)"/>
+    
+    <path d="M 60 65 Q 42 50 35 60 Q 48 54 60 60" fill="url(#goldGunungan)"/>
+    <path d="M 60 65 Q 78 50 85 60 Q 72 54 60 60" fill="url(#goldGunungan)"/>
+
+    <path d="M 60 45 Q 48 35 42 42 Q 52 38 60 42" fill="url(#goldGunungan)"/>
+    <path d="M 60 45 Q 72 35 78 42 Q 68 38 60 42" fill="url(#goldGunungan)"/>
+
+    <!-- Peak Gem / Surya Kencana -->
+    <circle cx="60" cy="8" r="3" fill="#ffffff" stroke="url(#goldGunungan)" stroke-width="1"/>
+  </g>
+</svg>
